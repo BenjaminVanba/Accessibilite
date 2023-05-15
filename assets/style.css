@@ -1,0 +1,63 @@
+.txt {
+    padding-top: 100px;
+}
+
+@media only screen and (max-width: 576px) {
+    .txt {
+        padding-top: 210px;
+    }
+}
+
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.toggle {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 66.67px;
+	height: 33.33px;
+	background: #AFB6BB;
+	display: block;
+	border-radius: 33.33px;
+	position: relative;
+}
+
+.toggle:after {
+	content: '';
+	position: absolute;
+	top: 1.67px; 
+	left: 1.67px; 
+	width: 30px; 
+	height: 30px; 
+	background: #fff;
+	border-radius: 30px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #A3A3FF;
+}
+
+input:checked + label:after {
+	left: calc(100% - 1.67px);
+	transform: translateX(-100%);
+}
+
+
+ 
+.toggle:active:after {
+	width: 43.33px;
+}
+
+// centering
+body {
+	display: flex;
+    font-size: 16px;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
